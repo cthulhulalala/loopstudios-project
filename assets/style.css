@@ -94,17 +94,15 @@ nav ul li a {
 .leader {
   padding: 170px 100px;
   display: flex;
-  transform: translate(4.75%, -1.25%);
   position: relative;
-}
-.leader img {
-  height: auto;
-  object-fit: contain;
 }
 .leaderText {
   background-color: #fff;
   padding: 80px;
-  transform: translate(-38%, 37%);
+  position: absolute;
+  top: 46%;
+  right: 60px;
+  width: 32%;
 }
 .leaderText h2 {
   font-size: 40px;
@@ -119,20 +117,21 @@ nav ul li a {
   color: black;
   display: flex;
   font-size: 26px;
-  margin: 6% 12%;
+  padding: 0 100px;
+  justify-content: space-between;
 }
 
 .creations h1 {
-  font-weight: 30;
+  font-size: 40px;
+  font-family: "Josefin Sans", sans-serif;
+  text-transform: uppercase;
+  color: var(--black-color);
 }
 
 .creations button {
   width: 150px;
   height: 43px;
-  margin-left: 46%;
-  background: transparent;
   border: 2px var(--very-dark-gray-color) solid;
-  transform: translateY(15px);
   font-size: 14px;
   font-family: "Alata", sans-serif;
   letter-spacing: 4px;
@@ -142,36 +141,189 @@ nav ul li a {
   cursor: pointer;
 }
 
-.creationsBox {
+.boxRow {
   display: flex;
-  flex-flow: column;
-  transform: translate(12%);
+  flex-wrap: wrap; /*allows to wrap content to next line*/
+  padding: 50px 85px;
+  padding-bottom: 100px;
 }
 
-.creationsBox .boxRow1 {
-  display: flex;
-  flex-flow: row;
+.box {
+  width: 25%;
+  position: relative;
+  padding: 15px;
+  box-sizing: border-box;
+}
+.overlay {
+  position: relative;
+}
+.overlay:before {
+  content: "";
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.15);
+}
+.box img {
+  width: 100%;
+  display: block;
+}
+.mobile {
+  display: none;
 }
 
-.creationsBox .boxRow2 {
-  display: flex;
-  flex-flow: row;
-}
-
-#box {
-  padding-right: 30px;
-}
-
-#box h2 {
+.box h2 {
   color: var(--white-color);
-  font-size: 32px;
-  transform: translateY(-122px);
-  padding-left: 38px;
+  font-size: 30px;
+  padding: 0 0 40px 40px;
   width: 161px;
+  font-family: "Josefin Sans", sans-serif;
+  position: absolute;
+  bottom: 0;
+  left: 0;
 }
 
 /*footer*/
 
-.social .copyright {
-  float: right;
+.footer {
+  background-color: black;
+  display: flex;
+  justify-content: space-between;
+  padding: 50px 100px;
+}
+
+.footer .footerNav {
+  padding-top: 20px;
+}
+.footer .footerNav ul {
+  display: flex;
+}
+
+.footer .footerNav ul li a {
+  padding-right: 30px;
+}
+.socialIcons {
+  text-align: right;
+}
+.footer * {
+  color: white;
+}
+.footer .leftSec img {
+  height: 30px;
+}
+.footer .rightSec img {
+  padding-right: 10px;
+}
+.footer .rightSec h4 {
+  padding-top: 20px;
+}
+.hamMenu {
+  display: none;
+}
+@media screen and (max-width: 768px) {
+  .hamMenu {
+    display: block;
+    position: absolute;
+    top: 57px;
+    right: 25px;
+  }
+  .closeMenu {
+    display: none;
+  }
+  header img {
+    padding-left: 25px;
+  }
+  nav {
+    display: none;
+    padding-right: 25px;
+  }
+  .heroText {
+    width: auto;
+    left: 0;
+    margin: 25px;
+  }
+  .heroText h1 {
+    font-size: 45px;
+    padding: 0 20px;
+  }
+  .leader {
+    padding: 50px 25px;
+    display: block;
+  }
+  .leader img {
+    width: 100%;
+  }
+  .leaderText {
+    position: static;
+    padding: 40px 0;
+    text-align: center;
+    width: auto;
+  }
+  .leaderText h2 {
+    padding-bottom: 20px;
+    font-size: 38px;
+  }
+  .leaderText p {
+    line-height: 25px;
+  }
+  .creations {
+    padding: 0 25px;
+    display: block;
+    text-align: center;
+  }
+  .creations button {
+    display: none;
+  }
+  .boxRow {
+    display: block;
+    padding: 30px 25px;
+    padding-bottom: 50px;
+  }
+  .boxRow .box {
+    width: 100%;
+    padding: 15px 0;
+  }
+  .box img {
+    display: none;
+  }
+  .box .mobile {
+    display: block;
+  }
+  .box h2 {
+    padding: 0 0 20px 20px;
+  }
+  .mobileBtn {
+    text-align: center;
+    margin-top: 20px;
+  }
+  .mobileBtn button {
+    width: 150px;
+    height: 43px;
+    border: 2px var(--very-dark-gray-color) solid;
+    font-size: 14px;
+    font-family: "Alata", sans-serif;
+    letter-spacing: 4px;
+    background: #fff;
+  }
+  .footer {
+    display: block;
+    padding: 50px 25px;
+    text-align: center;
+  }
+  .footer .footerNav {
+    padding-top: 20px;
+  }
+  .footer .footerNav ul {
+    flex-direction: column;
+  }
+  .footer .footerNav ul li a {
+    padding-bottom: 20px;
+    display: inline-block;
+  }
+  .socialIcons {
+    text-align: center;
+    margin-top: 20px;
+  }
 }

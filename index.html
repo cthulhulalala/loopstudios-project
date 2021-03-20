@@ -22,6 +22,7 @@
       integrity="sha512-shT5e46zNSD6lt4dlJHb+7LoUko9QZXTGlmWWx0qjI9UhQrElRb+Q5DM7SVte9G9ZNmovz2qIaV7IWv0xQkBkw=="
       crossorigin="anonymous"
     />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
     <link rel="stylesheet" href="assets/style.css" />
   </head>
   <body>
@@ -48,6 +49,10 @@
           </li>
         </ul>
       </nav>
+      <div class="hamMenu">
+        <img class="openMenu" src="assets/images/icon-hamburger.svg" alt="">
+        <img class="closeMenu" src="assets/images/icon-close.svg" alt="">
+      </div>
     </header>
 
     <div class="hero">
@@ -75,55 +80,73 @@
       <button>SEE ALL</button>
     </div>
 
-    <div class="creationsBox">
-      <div class="boxRow1">
-        <div id="box">
+    <div class="boxRow">
+      <div class="box">
+        <div class="overlay">
           <img src="assets/images/desktop/earth.jpg" />
-          <h2>DEEP EARTH</h2>
+          <img class="mobile" src="assets/images/mobile/earth.jpg" />
+          <h2>DEEP<br>EARTH</h2>
         </div>
-
-        <div id="box">
+      </div>
+      <div class="box">
+        <div class="overlay">
           <img src="assets/images/desktop/night.jpg" />
-          <h2>NIGHT ARCADE</h2>
+          <img class="mobile" src="assets/images/mobile/night.jpg" />
+          <h2>NIGHT<br>ARCADE</h2>
         </div>
-
-        <div id="box">
+      </div>
+      <div class="box">
+        <div class="overlay">
           <img src="assets/images/desktop/soccer.jpg" />
-          <h2>SOCCER TEAM VR</h2>
+          <img class="mobile" src="assets/images/mobile/soccer.jpg" />
+          <h2>SOCCER<br>TEAM VR</h2>
         </div>
-        <div id="box">
+      </div>
+      <div class="box">
+        <div class="overlay">
           <img src="assets/images/desktop/grid.jpg" />
-          <h2>THE GRID</h2>
+          <img class="mobile" src="assets/images/mobile/grid.jpg" />
+          <h2>THE<br>GRID</h2>
         </div>
       </div>
-
-      <div class="boxRow2">
-        
-        <div id="box">
+      <div class="box">
+        <div class="overlay">
           <img src="assets/images/desktop/vr.jpg" />
-          <h2>FROM UP ABOVE VR</h2>
+          <img class="mobile" src="assets/images/mobile/vr.jpg" />
+          <h2>FROM UP<br>ABOVE VR</h2>
         </div>
-        <div id="box">
+      </div>
+      <div class="box">
+        <div class="overlay">
           <img src="assets/images/desktop/pocketborealis.jpg" />
-          <h2>POCKET BOREALIS</h2>
+          <img class="mobile" src="assets/images/mobile/pocketborealis.jpg" />
+          <h2>POCKET<br>BOREALIS</h2>
         </div>
-        <div id="box">
+      </div>
+      <div class="box">
+        <div class="overlay">
           <img src="assets/images/desktop/curiosity.jpg" />
-          <h2>THE CURIOSITY</h2>
+          <img class="mobile" src="assets/images/mobile/curiosity.jpg" />
+          <h2>THE<br>CURIOSITY</h2>
         </div>
-        <div id="box">
+      </div>
+      <div class="box">
+        <div class="overlay">
           <img src="assets/images/desktop/fisheye.jpg" />
-          <h2>MAKE IT FISHEYE</h2>
+          <img class="mobile" src="assets/images/mobile/fisheye.jpg" />
+          <h2>MAKE IT<br>FISHEYE</h2>
         </div>
       </div>
+      <div class="mobileBtn">
+        <button >SEE ALL</button>
       </div>
+    </div>
 
-      <div class="footer">
-        <div>
-          <h1>Loopstudios</h1>
-        </div>
+    <div class="footer">
 
-       <div class="footerNav">
+       <div class="leftSec">
+         <img src="assets/images/logo.svg" alt="">
+        <div class="footerNav">
           <ul>
             <li>
               <a href="#">About</a>
@@ -141,20 +164,19 @@
               <a href="#">Support</a>
             </li>
           </ul>
-       </div> 
-
-       <div class="social">
-         <p>facebook</p>
-         <p>facebook</p>
-         <p>facebook</p>
-         <p>facebook</p>
+        </div> 
        </div>
 
-       <div class="copyright">
-        © 2021 Loopstudios. All rights reserved.
-       </div>
-      
+       <div class="rightSec">
+         <div class="socialIcons">
+           <img src="assets/images/icon-facebook.svg" alt="">
+           <img src="assets/images/icon-twitter.svg" alt="">
+           <img src="assets/images/icon-pinterest.svg" alt="">
+           <img src="assets/images/icon-instagram.svg" alt="">
+         </div>
+        <h4>© 2021 Loopstudios. All rights reserved.</h4> 
       </div>
     </div>
+    
   </body>
 </html>
