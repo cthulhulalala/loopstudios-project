@@ -329,10 +329,16 @@ img.mobile {
   }
   .footer .footerNav ul li a {
     padding-bottom: 20px;
+    padding-right: 0;
     display: inline-block;
   }
   .socialIcons {
     text-align: center;
     margin-top: 20px;
+  }
+}
+@media screen and (max-width: 400px) {
+  .heroText h1 {
+    font-size: 38px;
   }
 }
