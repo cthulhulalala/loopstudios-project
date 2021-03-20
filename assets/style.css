@@ -226,6 +226,12 @@ img.mobile {
   display: none;
 }
 @media screen and (max-width: 768px) {
+  .hero img {
+    display: none;
+  }
+  .hero img.mobile {
+    display: block;
+  }
   .hamMenu {
     display: block;
     position: absolute;
