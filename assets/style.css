@@ -92,7 +92,7 @@ nav ul li a {
 /*leader section and text*/
 
 .leader {
-  padding: 170px 100px;
+  padding: 100px;
   display: flex;
   position: relative;
 }
@@ -145,7 +145,7 @@ nav ul li a {
   display: flex;
   flex-wrap: wrap; /*allows to wrap content to next line*/
   padding: 50px 85px;
-  padding-bottom: 100px;
+  padding-bottom: 80px;
 }
 
 .box {
@@ -213,11 +213,14 @@ img.mobile {
 .footer .leftSec img {
   height: 30px;
 }
-.footer .rightSec img {
+.footer .rightSec img:not(:last-child) {
   padding-right: 10px;
 }
 .footer .rightSec h4 {
   padding-top: 20px;
+  font-weight: normal;
+  font-size: 16px;
+  color: #b9b9b9;
 }
 .hamMenu {
   display: none;
@@ -226,6 +229,34 @@ img.mobile {
   display: none;
 }
 @media screen and (max-width: 768px) {
+  header.open {
+    position: fixed;
+  }
+  nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: #000000;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    display: none;
+  }
+  header.open nav {
+    display: flex;
+  }
+  nav ul {
+    display: block;
+  }
+  nav ul li a {
+    display: block;
+    padding: 10px 25px;
+    color: hsl(0deg 0% 80%);
+    font-size: 22px;
+    font-family: "Josefin Sans";
+    text-transform: uppercase;
+  }
   .hero img {
     display: none;
   }
@@ -235,18 +266,27 @@ img.mobile {
   .hamMenu {
     display: block;
     position: absolute;
-    top: 57px;
+    top: 54px;
     right: 25px;
   }
-  .closeMenu {
+  img.closeMenu {
     display: none;
+  }
+  header.open img.openMenu {
+    display: none;
+  }
+  header.open img.closeMenu {
+    display: block;
+    padding-right: 2px;
   }
   header img {
     padding-left: 25px;
+    max-width: 150px;
   }
-  nav {
-    display: none;
-    padding-right: 25px;
+  .logo {
+    position: relative;
+    z-index: 9;
+    max-width: 150px;
   }
   .heroText {
     width: auto;
